@@ -13,6 +13,9 @@ create-migration:
 migrate:
 	php bin/console doctrine:migrations:migrate
 
+create-db:
+	php bin/console doctrine:database:create
+
 install:
 	composer install
 	touch .env.local
@@ -20,7 +23,6 @@ install:
 	echo "TOKEN_EXP=31536000	# 1 an en secondes" >> .env.local
 	echo TOKEN_PASS="p@ssw0rd" >> .env.local
 	echo TOKEN_WEBSITE="localhost" >> .env.local
-	php bin/console doctrine:database:create
 
 dotenv:
 	php bin/console debug:dotenv
