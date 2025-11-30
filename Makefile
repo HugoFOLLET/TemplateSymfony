@@ -19,7 +19,7 @@ create-db:
 install:
 	composer install
 	touch .env.local
-	echo DATABASE_URL="postgresql://postgres:root@localhost:5432/devfecations" > .env.local
+	echo DATABASE_URL="postgresql://postgres:root@localhost:5432/devfecations?serverVersion=16.11" > .env.local
 	echo "TOKEN_EXP=31536000	# 1 an en secondes" >> .env.local
 	echo TOKEN_PASS="p@ssw0rd" >> .env.local
 	echo TOKEN_WEBSITE="localhost" >> .env.local
